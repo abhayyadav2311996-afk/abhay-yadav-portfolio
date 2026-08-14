@@ -92,11 +92,29 @@ footer{color:#77736b;border-color:rgba(23,23,23,.10)}
 .demo-btn{color:#4f4b44;border-color:rgba(23,23,23,.12)}
 .demo-btn:hover{color:#a47b24;border-color:rgba(198,155,60,.55)}
 
+
+.ay-brand{display:flex;align-items:center;gap:9px;line-height:1;text-decoration:none}
+.ay-brand img{width:34px;height:34px;border-radius:10px;display:block;box-shadow:0 5px 18px rgba(198,155,60,.18)}
+.ay-brand span{font:800 17px "Space Grotesk",sans-serif;letter-spacing:.02em;color:#171717}
+.ay-brand b{font:800 17px "Space Grotesk",sans-serif;letter-spacing:.02em;color:#c69b3c}
+@media(max-width:650px){.ay-brand img{width:31px;height:31px}.ay-brand span,.ay-brand b{font-size:15px}}
+
 </style>
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#f7f4ec">
+
 </head>
 <body>
 <nav>
-<a class="logo" href="#home">ABHAY<span>.</span></a>
+<a class="logo ay-brand" href="#home" aria-label="Abhay Yadav home">
+  <img src="favicon-48.png" alt="AY">
+  <span>ABHAY</span><b>YADAV</b>
+</a>
 <button class="menu" id="menu" aria-label="Menu">☰</button>
 <div class="links" id="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#process">Process</a><a href="#contact">Contact</a><a class="cta" href="https://www.instagram.com/abhay.yadav._28/" target="_blank" rel="noopener">Instagram ↗</a></div>
 </nav>
