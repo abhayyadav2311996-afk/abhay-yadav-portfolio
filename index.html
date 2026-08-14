@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Abhay Yadav — Creative Designer, AI Enthusiast and Web Learner. Explore his graphic design, AI, video editing and web projects." />
+  <meta name="keywords" content="Abhay Yadav, Graphic Designer, AI, Video Editing, Web Development, Python, Portfolio" />
+  <meta name="author" content="Abhay Yadav" />
+  <meta name="theme-color" content="#080808" />
+  <meta property="og:title" content="Abhay Yadav — Creative Designer & AI Enthusiast" />
+  <meta property="og:description" content="Personal portfolio of Abhay Yadav." />
+  <meta property="og:type" content="website" />
+  <title>Abhay Yadav | Creative Designer • AI • Web</title>
+
+  <style>
+    :root{
+      --bg:#070707;
+      --surface:#101010;
+      --surface2:#151515;
+      --text:#f5f5f5;
+      --muted:#a7a7a7;
+      --line:rgba(255,255,255,.10);
+      --accent:#ffffff;
+      --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,.07), transparent 24%),
+        radial-gradient(circle at 10% 40%, rgba(255,255,255,.045), transparent 25%),
+        var(--bg);
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),92%);margin:auto}
+    .nav{
+      position:fixed;top:0;left:0;right:0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(7,7,7,.72);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:800;letter-spacing:.08em;font-size:.95rem}
+    .brand span{color:#888}
+    .nav-links{display:flex;gap:28px;font-size:.9rem;color:#bdbdbd}
+    .nav-links a:hover{color:white}
+    .menu{display:none;background:none;border:0;color:white;font-size:1.5rem}
+
+    .hero{min-height:100vh;display:grid;place-items:center;padding:130px 0 70px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:9px;
+      padding:8px 13px;border:1px solid var(--line);border-radius:999px;
+      color:#cfcfcf;background:rgba(255,255,255,.035);font-size:.82rem;margin-bottom:22px
+    }
+    .dot{width:7px;height:7px;background:white;border-radius:50%;box-shadow:0 0 16px white}
+    h1{font-size:clamp(3.3rem,8vw,7rem);line-height:.94;letter-spacing:-.065em}
+    .gradient{
+      background:linear-gradient(90deg,#fff,#8d8d8d);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .hero-copy{font-size:1.15rem;color:var(--muted);max-width:650px;margin:25px 0 32px}
+    .roles{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+    .pill{border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:#d0d0d0;font-size:.82rem}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:13px 18px;border-radius:12px;border:1px solid var(--line);
+      transition:.25s;cursor:pointer
+    }
+    .btn-primary{background:#fff;color:#080808;font-weight:700}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 35px rgba(255,255,255,.12)}
+    .btn-ghost{background:rgba(255,255,255,.04);color:#fff}
+    .btn-ghost:hover{background:rgba(255,255,255,.09)}
+
+    .portrait-wrap{display:flex;justify-content:center;position:relative}
+    .portrait-wrap::before{
+      content:"";position:absolute;width:330px;height:330px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.13);box-shadow:0 0 90px rgba(255,255,255,.07)
+    }
+    .portrait{
+      width:min(390px,82vw);aspect-ratio:4/5;object-fit:cover;object-position:center 44%;
+      border-radius:28px;position:relative;z-index:2;
+      border:1px solid rgba(255,255,255,.18);
+      filter:saturate(.9) contrast(1.04);
+      box-shadow:0 35px 90px rgba(0,0,0,.55);
+    }
+    .float-card{
+      position:absolute;z-index:3;bottom:25px;left:0;
+      background:rgba(15,15,15,.86);border:1px solid var(--line);
+      backdrop-filter:blur(16px);padding:13px 16px;border-radius:15px;
+      font-size:.82rem;color:#ddd
+    }
+    section{padding:105px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+    .kicker{color:#888;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+    h2{font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.045em;line-height:1}
+    .section-intro{color:var(--muted);max-width:520px}
+
+    .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+    .about-text p{color:#b8b8b8;font-size:1.04rem;margin-bottom:18px}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{padding:24px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#111,#0b0b0b)}
+    .stat strong{display:block;font-size:1.7rem;margin-bottom:4px}
+    .stat span{color:#888;font-size:.85rem}
+
+    .skills{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .skill{padding:24px 18px;border:1px solid var(--line);border-radius:18px;background:#0d0d0d;transition:.25s}
+    .skill:hover{transform:translateY(-5px);background:#141414}
+    .skill-number{font-size:.72rem;color:#777;margin-bottom:35px}
+    .skill h3{font-size:1rem;margin-bottom:5px}
+    .skill p{font-size:.78rem;color:#777}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project{
+      min-height:280px;padding:27px;border:1px solid var(--line);border-radius:22px;
+      background:
+        radial-gradient(circle at 90% 10%,rgba(255,255,255,.08),transparent 25%),
+        #0d0d0d;
+      display:flex;flex-direction:column;justify-content:space-between;transition:.3s
+    }
+    .project:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.22)}
+    .project-tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.13em;color:#777}
+    .project h3{font-size:1.55rem;margin:15px 0 8px}
+    .project p{color:#888;max-width:480px}
+    .project-link{margin-top:25px;font-size:.85rem;color:#ddd}
+
+    .contact-box{
+      padding:55px;border:1px solid var(--line);border-radius:28px;
+      background:linear-gradient(135deg,#151515,#0b0b0b);
+      display:flex;align-items:center;justify-content:space-between;gap:30px
+    }
+    .contact-box p{color:#888;margin-top:10px;max-width:600px}
+    footer{padding:35px 0;border-top:1px solid var(--line);color:#777;font-size:.8rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px}
+    .reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:900px){
+      .hero-grid,.about{grid-template-columns:1fr}
+      .hero-grid{gap:45px}
+      .portrait-wrap{order:-1}
+      .portrait{width:min(310px,75vw)}
+      .float-card{left:8%}
+      .skills{grid-template-columns:repeat(2,1fr)}
+      .projects{grid-template-columns:1fr}
+      .contact-box{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:650px){
+      .nav-links{display:none}
+      .menu{display:block}
+      .hero{padding-top:110px}
+      h1{font-size:clamp(3.1rem,17vw,5rem)}
+      .hero-copy{font-size:1rem}
+      section{padding:75px 0}
+      .section-head{display:block}
+      .section-intro{margin-top:15px}
+      .skills{grid-template-columns:1fr 1fr}
+      .skill{padding:18px 14px}
+      .contact-box{padding:30px 22px}
+      .footer-inner{flex-direction:column}
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">ABHAY<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="menu" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow"><span class="dot"></span> Building ideas with design & technology</div>
+          <h1>Hi, I'm<br><span class="gradient">Abhay Yadav.</span></h1>
+          <p class="hero-copy">
+            A creative designer and AI enthusiast exploring graphic design, video,
+            web development and Python — turning ideas into clean, useful digital experiences.
+          </p>
+          <div class="roles">
+            <span class="pill">Graphic Design</span>
+            <span class="pill">AI</span>
+            <span class="pill">Video Editing</span>
+            <span class="pill">Web Development</span>
+            <span class="pill">Python</span>
+          </div>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#projects">View My Work ↗</a>
+            <a class="btn btn-ghost" href="https://www.instagram.com/abhay.yadav._28/" target="_blank" rel="noopener">Instagram ↗</a>
+          </div>
+        </div>
+
+        <div class="portrait-wrap reveal">
+          <img class="portrait" src="profile.png" alt="Abhay Yadav" />
+          <div class="float-card">Creative • Curious • Always Learning</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">01 — About</div>
+            <h2>Designing today.<br>Learning for tomorrow.</h2>
+          </div>
+          <p class="section-intro">
+            I enjoy experimenting with design, AI and technology to create things that look good and work well.
+          </p>
+        </div>
+
+        <div class="about">
+          <div class="about-text reveal">
+            <p>
+              I'm Abhay Yadav, a learner and creator interested in the space where
+              creativity meets technology.
+            </p>
+            <p>
+              From graphic design and AI-generated visuals to websites, video editing
+              and Python, I'm continuously building new skills through hands-on projects.
+            </p>
+            <p>
+              This portfolio is a place to showcase that journey and the work I'm proud of.
+            </p>
+          </div>
+          <div class="stats reveal">
+            <div class="stat"><strong>05+</strong><span>Creative & technical skills</span></div>
+            <div class="stat"><strong>04+</strong><span>Project categories</span></div>
+            <div class="stat"><strong>∞</strong><span>Ideas to explore</span></div>
+            <div class="stat"><strong>24/7</strong><span>Learning mindset</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">02 — Skills</div>
+            <h2>What I work with.</h2>
+          </div>
+        </div>
+        <div class="skills">
+          <div class="skill reveal"><div class="skill-number">01</div><h3>Graphic Design</h3><p>Visual identity, posters & creative concepts</p></div>
+          <div class="skill reveal"><div class="skill-number">02</div><h3>AI</h3><p>AI tools, creative workflows & experimentation</p></div>
+          <div class="skill reveal"><div class="skill-number">03</div><h3>Video Editing</h3><p>Short-form edits, visuals & storytelling</p></div>
+          <div class="skill reveal"><div class="skill-number">04</div><h3>Web Development</h3><p>Responsive websites & digital experiences</p></div>
+          <div class="skill reveal"><div class="skill-number">05</div><h3>Python</h3><p>Learning programming & automation fundamentals</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="kicker">03 — Selected Work</div>
+            <h2>Things I've been<br>creating.</h2>
+          </div>
+          <p class="section-intro">A growing collection of design, AI, video and web experiments.</p>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal">
+            <div><div class="project-tag">Web Development</div><h3>RK Sports Website</h3><p>A sports-store web experience built around products, branding and a clean shopping interface.</p></div>
+            <div class="project-link">01 / Web Project</div>
+          </article>
+          <article class="project reveal">
+            <div><div class="project-tag">Branding</div><h3>Logo Designs</h3><p>Modern logo concepts and visual identities created for different ideas and brands.</p></div>
+            <div class="project-link">02 / Design</div>
+          </article>
+          <article class="project reveal">
+            <div><div class="project-tag">Artificial Intelligence</div><h3>AI Images</h3><p>Creative experiments using AI to explore surreal, realistic and stylized visual concepts.</p></div>
+            <div class="project-link">03 / AI Creative</div>
+          </article>
+          <article class="project reveal">
+            <div><div class="project-tag">Video</div><h3>Video Editing Projects</h3><p>Short-form edits, transitions, motion ideas and social-media focused visual storytelling.</p></div>
+            <div class="project-link">04 / Video</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div>
+            <div class="kicker">04 — Let's Connect</div>
+            <h2>Have an idea?<br>Let's create it.</h2>
+            <p>For collaborations, design ideas or just to say hello, connect with me on Instagram.</p>
+          </div>
+          <a class="btn btn-primary" href="https://www.instagram.com/abhay.yadav._28/" target="_blank" rel="noopener">Visit Instagram ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Abhay Yadav. All rights reserved.</span>
+      <span>Designed & built with curiosity.</span>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    document.querySelector('.menu').addEventListener('click', ()=>{
+      const links = document.querySelector('.nav-links');
+      const open = links.style.display === 'flex';
+      links.style.display = open ? 'none' : 'flex';
+      if(!open){
+        links.style.position='absolute';
+        links.style.top='72px';
+        links.style.left='0';
+        links.style.right='0';
+        links.style.padding='20px';
+        links.style.background='rgba(7,7,7,.96)';
+        links.style.flexDirection='column';
+      }
+    });
+  </script>
+</body>
+</html>
