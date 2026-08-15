@@ -1,0 +1,14 @@
+UPDATED PORTFOLIO SETUP
+
+Changes:
+1. Hero profile photo replaced with the AY website logo.
+2. Mobile hamburger menu is now a clearly visible white button with a black icon.
+3. Instagram updated to https://www.instagram.com/aycreativeai/
+4. Contact section includes a direct Email button and aycreativeai@gmail.com.
+5. AY favicon/logo files included.
+
+GitHub:
+- Replace index.html.
+- Add the included favicon PNG files.
+- Keep existing rk-sports-showcase.png, birthday-showcase.png, thank-you.html, sitemap.xml and robots.txt.
+- profile.png can remain in GitHub, but index.html no longer uses it.
